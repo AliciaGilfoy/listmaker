@@ -44,11 +44,6 @@ export default class ListController {
     _drawLists()
   }
 
-  completeItem(itemName, listId, itemId) {
-    _listService.completeItem(itemName, listId, itemId)
-    _drawCompletedLists()
-    _drawLists()
-  }
 
 
 
