@@ -21,7 +21,7 @@ export default class List {
 
   get Template() {
     return `
-    <div class="col-3 bg-dark list">
+    <div class="col-12 col-md-3 bg-dark list">
     <h5 class="my-2"><u>${this.listName}</u></h5>
     <button type="button" class="close-button text-danger" onclick="app.listController.deleteList('${this.id}')"><i class="fas fa-trash-alt"></i></button>
     <div id="listItem">
