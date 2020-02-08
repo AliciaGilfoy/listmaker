@@ -30,9 +30,7 @@ padding-top: 2rem;
 }
 
 .list-row{
-background-color: rgba(0, 89, 255, 0.397);
 color: black;
-min-height: 100px;
 margin: 2px;
 display: flex;
 flex-direction: row;
