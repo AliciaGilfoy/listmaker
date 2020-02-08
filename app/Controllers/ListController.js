@@ -8,11 +8,13 @@ function _drawLists() {
   let template = ""
 
   lists.forEach(list => {
-    template = list.Template
+    template += list.Template
   })
 
   listElem.innerHTML = template
 }
+
+
 
 //Public
 export default class ListController {
@@ -42,6 +44,11 @@ export default class ListController {
     _drawLists()
   }
 
+  completeItem(itemName, listId, itemId) {
+    _listService.completeItem(itemName, listId, itemId)
+    _drawCompletedLists()
+    _drawLists()
+  }
 
 
 
@@ -50,8 +57,8 @@ export default class ListController {
     _drawLists()
   }
 
-  deleteItem(id) {
-    _listService.deleteItem(id)
+  deleteItem(listId, itemId) {
+    _listService.deleteItem(listId, itemId)
     _drawLists()
   }
 

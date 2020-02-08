@@ -1,10 +1,12 @@
 import { generateId } from "../utils.js";
-import Item from "../Models/Items.js"
+
+
+
 
 export default class List {
   constructor(data) {
     this.listName = data.listName
-    this.listItems = []
+    this.listItems = data.listItems || []
     this.id = data.id || generateId()
   }
 

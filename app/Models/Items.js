@@ -9,9 +9,9 @@ export default class Item {
   template(listId) {
     return `
     <div class="col-12 added-item">
+    <h6>${this.itemName}</h6>
     <button type="button" class="remove-item" onclick="app.listController.deleteItem('${listId}','${this.id}')"><i
     class="fas fa-times-circle"></i></button>
-    <h6>${this.itemName}</h6>
     </div>
 `}
 

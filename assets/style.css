@@ -1,13 +1,27 @@
 body{
 max-width: 100vw;
 min-height: 100vh;
-background-color: rgb(209, 203, 203);
 }
 
+#myVideo{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+main{
+  position: relative;
+}
+
+header{
+  position: relative;
+}
 
 .title-row{
 background-color: rgba(0, 0, 0, 0.747);
-color: rgb(212, 46, 212);
+color: rgb(0, 89, 255);
 font-family: cursive;
 display: flex;
 flex-direction: column;
@@ -16,7 +30,7 @@ padding-top: 2rem;
 }
 
 .list-row{
-background-color: rgba(212, 46, 212, 0.397);
+background-color: rgba(0, 89, 255, 0.397);
 color: black;
 min-height: 100px;
 margin: 2px;
@@ -28,7 +42,7 @@ flex-wrap: wrap;
 
 .footer-row{
 background-color: rgba(0, 0, 0, 0.747);
-color:rgb(212, 46, 212);
+color: rgb(0, 89, 255);
 font-family: cursive;
 display: flex;
 flex-direction: row;
@@ -75,11 +89,20 @@ flex-direction: row;
   opacity: .5;
   background-color: transparent;
   border: transparent;
+  margin-left: 2rem;
 }
 
 .added-item{
   display: flex;
   flex-direction: row;
   align-items: baseline;
+  padding-left: 0;
 }
+
+footer{
+  position: fixed;
+  bottom: 0;
+}
+
+
 
