@@ -6,18 +6,23 @@ import Item from "../Models/Items.js";
 //Public
 class ListService {
   deleteItem(listId, itemId) {
-    window.confirm("Are you sure you want to delete this item?");
-    let hereList = _store.State.lists.find(list => list.id === listId)
-    let item = hereList.listItems.findIndex(item => item.id === itemId)
-    hereList.listItems.splice(item, 1)
-    _store.saveState()
+    let windowMessage = window.confirm("Are you sure you want to delete this item?")
+    if (windowMessage === true) {
+      let hereList = _store.State.lists.find(list => list.id === listId)
+      let item = hereList.listItems.findIndex(item => item.id === itemId)
+      hereList.listItems.splice(item, 1)
+      _store.saveState()
+    }
   }
   deleteList(id) {
-    window.confirm("Are you sure you want to delete this list?");
-    let lists = _store.State.lists.filter(list => list.id !== id)
-    _store.State.lists = lists
-    _store.saveState()
+    let windowMessage = window.confirm("Are you sure you want to delete this list?")
+    if (windowMessage == true) {
+      let lists = _store.State.lists.filter(list => list.id !== id)
+      _store.State.lists = lists
+      _store.saveState()
+    }
   }
+
 
 
   newListItem(newItem, listId) {
